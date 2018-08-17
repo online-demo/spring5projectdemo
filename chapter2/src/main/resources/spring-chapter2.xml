@@ -7,6 +7,9 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
+    <!--spring 管理的bean的路径-->
+    <context:component-scan base-package="com.test.ioc"></context:component-scan>
+
     <!-- User无参构造器 -->
     <bean id="user" class="com.test.ioc.xml.User"/>
     <!--Order有参构造器-->
@@ -14,6 +17,15 @@
         <constructor-arg index="0" value="201808121706"/>
         <constructor-arg index="1" value="1000"/>
     </bean>
-    <!--spring 管理的bean的路径-->
-    <context:component-scan base-package="com.test.ioc"></context:component-scan>
+
+    <!--BookService-->
+    <bean id="bookService" class="com.test.sourcecodelearning.BookServiceImpl">
+    </bean>
+
+    <!--PressService-->
+    <bean id="pressService" class="com.test.sourcecodelearning.PressServiceImpl">
+        <!--设置依赖关系：pressService依赖pressService-->
+        <property name="bookService" ref="bookService"></property>
+    </bean>
+
 </beans>
