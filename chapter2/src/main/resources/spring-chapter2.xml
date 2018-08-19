@@ -27,5 +27,4 @@
         <!--设置依赖关系：pressService依赖pressService-->
         <property name="bookService" ref="bookService"></property>
     </bean>
-
 </beans>
