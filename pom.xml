@@ -11,6 +11,7 @@
     <module>chapter1</module>
     <module>spring5</module>
     <module>chapter2</module>
+      <module>chapter3</module>
   </modules>
 
   <packaging>pom</packaging>
