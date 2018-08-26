@@ -1,5 +1,6 @@
-package com.test.aop.jdk.xml;
+package com.test.aop.jdk.annotation;
 
+import com.test.aop.jdk.xml.Fruit;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,11 +9,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @Date: 2018/8/25 19:27
  * @Description: xml aop测试
  */
-public class SpringAopXmlDemo {
+public class SpringAopAnnotationDemo {
 
     public static void main(String[] args) throws InterruptedException {
         ApplicationContext applicationContext
-                = new ClassPathXmlApplicationContext("classpath:spring-chapter3-xmlaop.xml");
+                = new ClassPathXmlApplicationContext("classpath:spring-chapter3-annotationaop.xml");
         Fruit apple = (Fruit) applicationContext.getBean("apple");
         Fruit banana = (Fruit) applicationContext.getBean("banana");
         apple.eat();

@@ -5,19 +5,14 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:component-scan base-package="com.test.aop.jdk.xml"></context:component-scan>
+    <!-- 开启注解扫描 -->
+    <context:component-scan base-package="com.test.aop.jdk.annotation"/>
     <!--apple-->
     <bean id="apple" class="com.test.aop.jdk.xml.Apple"></bean>
     <!--banana-->
     <bean id="banana" class="com.test.aop.jdk.xml.Banana"></bean>
     <!--fruitHandler-->
     <bean id="fruitHandler" class="com.test.aop.jdk.xml.FruitHandler"></bean>
-
-    <aop:config>
-        <aop:aspect id="datelog" ref="fruitHandler">
-            <aop:pointcut id="addAllMethod" expression="execution(* com.test.aop.jdk.xml.Fruit*(..))" />
-            <aop:before method="startEatFruitDate" pointcut-ref="addAllMethod" />
-            <aop:after method="endEatFruitDate" pointcut-ref="addAllMethod" />
-        </aop:aspect>
-    </aop:config>
+    <!-- 开启aop注解方式，此步骤不能少 -->
+    <aop:aspectj-autoproxy/>
 </beans>
