@@ -13,15 +13,18 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class AllAspect {
 
+    /**
+     * 切入点
+     */
     @Pointcut("execution(* com.test.aoptype.*.*(..))")
-    public void pointCut() {
+    public void allAointCut() {
 
     }
 
     /**
      * 前置增强
      */
-    @Before("pointCut() ")
+    @Before("allAointCut()")
     public void before() {
         System.out.println("before advice");
     }
@@ -30,15 +33,17 @@ public class AllAspect {
      * 环绕增强
      * @param proceedingJoinPoint
      */
-    @Around("pointCut()")
+    @Around("allAointCut()")
     public void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("around advice 1");
         proceedingJoinPoint.proceed();
         System.out.println("around advice 2");
     }
 
-
-    @AfterReturning("pointCut()")
+    /**
+     * 后置增强
+     */
+    @AfterReturning("allAointCut()")
     public void afterReturning() {
         System.out.println("afterReturning advise");
     }
@@ -46,7 +51,7 @@ public class AllAspect {
     /**
      * 异常抛出增强
      */
-    @AfterThrowing("pointCut()")
+    @AfterThrowing("allAointCut()")
     public void afterThrowing() {
         System.out.println("afterThrowing advice");
     }
@@ -54,7 +59,7 @@ public class AllAspect {
     /**
      * 后置增强
      */
-    @After("pointCut()")
+    @After("allAointCut()")
     public void after() {
         System.out.println("after advise");
     }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 开启注解扫描 -->
+    <context:component-scan base-package="com.test.springaoptype"/>
+
+    <bean id="waiter" class="com.test.springaoptype.Waiter"/>
+
+    <bean id="manager" class="com.test.springaoptype.introductioninterceptor.Manager"/>
+
+    <bean id="waiterProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interfaces="com.test.springaoptype.introductioninterceptor.Management"
+          p:interceptorNames="manager"
+          p:target-ref = "waiter"
+          p:proxyTargetClass="true"/>
+</beans>
