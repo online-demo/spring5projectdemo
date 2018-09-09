@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @ContextConfiguration("classpath:spring-chapter2-beanlifecycle.xml")
-public class LifecycleTest {
+public class BeanLifecycleTest {
     @Autowired
     private BeanLifecycle beanLifecycle;
 
