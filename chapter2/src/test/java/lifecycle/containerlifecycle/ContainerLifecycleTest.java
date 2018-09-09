@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * @Author zhouguanya
  * @Date 2018/8/19
- * @Description 容器级生命周期测试
+ * @Description Bean级生命周期+容器级生命周期测试
  */
 public class ContainerLifecycleTest {
     public static void main(String[] args) {
