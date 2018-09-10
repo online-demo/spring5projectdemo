@@ -1,6 +1,5 @@
-package com.test.springaoptype.introductioninterceptor;
+package com.test.springadvicetype.introductioninterceptor;
 
-import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.aop.support.DelegatingIntroductionInterceptor;
 
 /**

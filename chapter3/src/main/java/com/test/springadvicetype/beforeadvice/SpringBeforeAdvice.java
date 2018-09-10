@@ -1,4 +1,4 @@
-package com.test.springaoptype.beforeadvice;
+package com.test.springadvicetype.beforeadvice;
 
 import org.springframework.aop.MethodBeforeAdvice;
 import org.springframework.stereotype.Component;

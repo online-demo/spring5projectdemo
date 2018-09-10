@@ -1,4 +1,4 @@
-package com.test.springaoptype;
+package com.test.springadvicetype;
 
 import org.springframework.stereotype.Component;
 

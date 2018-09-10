@@ -1,4 +1,4 @@
-package com.test.aoptype;
+package com.test.aspectj.aoptype;
 
 import org.springframework.stereotype.Component;
 

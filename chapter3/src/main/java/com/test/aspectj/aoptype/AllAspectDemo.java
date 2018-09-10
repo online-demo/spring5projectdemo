@@ -1,4 +1,4 @@
-package com.test.aoptype;
+package com.test.aspectj.aoptype;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,4 +1,4 @@
-package com.test.springaoptype.methodinterceptor;
+package com.test.springadvicetype.methodinterceptor;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;

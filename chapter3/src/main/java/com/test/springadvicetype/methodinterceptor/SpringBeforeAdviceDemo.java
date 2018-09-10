@@ -1,6 +1,6 @@
-package com.test.springaoptype.beforeadvice;
+package com.test.springadvicetype.methodinterceptor;
 
-import com.test.springaoptype.Waiter;
+import com.test.springadvicetype.Waiter;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -8,14 +8,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * @Author zhouguanya
  * @Date 2018/9/2
- * @Description Spring前置增强测试
+ * @Description Spring环绕增强测试
  */
 public class SpringBeforeAdviceDemo {
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring-chapter3-springaoptype.xml");
         Waiter waiter = (Waiter) context.getBean("waiter");
-        SpringBeforeAdvice advice = (SpringBeforeAdvice) context.getBean("springBeforeAdvice");
+        SpringMethodInterceptor advice = (SpringMethodInterceptor) context.getBean("springMethodInterceptor");
         //Spring提供的代理工厂
         ProxyFactory pf = new ProxyFactory();
         //设置代理目标

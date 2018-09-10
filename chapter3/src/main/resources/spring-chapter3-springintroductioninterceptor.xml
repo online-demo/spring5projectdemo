@@ -6,14 +6,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <!-- 开启注解扫描 -->
-    <context:component-scan base-package="com.test.springaoptype"/>
+    <context:component-scan base-package="com.test.springadvicetype"/>
 
-    <bean id="waiter" class="com.test.springaoptype.Waiter"/>
+    <bean id="waiter" class="com.test.springadvicetype.Waiter"/>
 
-    <bean id="manager" class="com.test.springaoptype.introductioninterceptor.Manager"/>
+    <bean id="manager" class="com.test.springadvicetype.introductioninterceptor.Manager"/>
 
     <bean id="waiterProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
-          p:interfaces="com.test.springaoptype.introductioninterceptor.Management"
+          p:interfaces="com.test.springadvicetype.introductioninterceptor.Management"
           p:interceptorNames="manager"
           p:target-ref = "waiter"
           p:proxyTargetClass="true"/>

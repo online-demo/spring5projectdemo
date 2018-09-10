@@ -1,4 +1,4 @@
-package com.test.aoptype;
+package com.test.aspectj.aoptype;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -16,7 +16,7 @@ public class AllAspect {
     /**
      * 切入点
      */
-    @Pointcut("execution(* com.test.aoptype.*.*(..))")
+    @Pointcut("execution(* com.test.aspectj.aoptype.*.*(..))")
     public void allAointCut() {
 
     }

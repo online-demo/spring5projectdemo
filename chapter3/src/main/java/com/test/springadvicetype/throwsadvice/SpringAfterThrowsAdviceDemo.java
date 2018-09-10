@@ -1,6 +1,6 @@
-package com.test.springaoptype.throwsadvice;
+package com.test.springadvicetype.throwsadvice;
 
-import com.test.springaoptype.Waiter;
+import com.test.springadvicetype.Waiter;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

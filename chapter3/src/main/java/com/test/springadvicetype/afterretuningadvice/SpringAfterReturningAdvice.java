@@ -1,4 +1,4 @@
-package com.test.springaoptype.afterretuningadvice;
+package com.test.springadvicetype.afterretuningadvice;
 
 import org.springframework.aop.AfterReturningAdvice;
 import org.springframework.stereotype.Component;

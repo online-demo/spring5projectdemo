@@ -1,9 +1,6 @@
-package com.test.springaoptype.introductioninterceptor;
+package com.test.springadvicetype.introductioninterceptor;
 
-import com.test.springaoptype.Waiter;
-import com.test.springaoptype.methodinterceptor.SpringMethodInterceptor;
-import org.springframework.aop.framework.ProxyFactory;
-import org.springframework.aop.support.DefaultIntroductionAdvisor;
+import com.test.springadvicetype.Waiter;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -1,7 +1,6 @@
-package com.test.springaoptype.afterretuningadvice;
+package com.test.springadvicetype.afterretuningadvice;
 
-import com.test.springaoptype.Waiter;
-import com.test.springaoptype.beforeadvice.SpringBeforeAdvice;
+import com.test.springadvicetype.Waiter;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

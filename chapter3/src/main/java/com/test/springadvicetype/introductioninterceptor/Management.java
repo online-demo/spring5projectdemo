@@ -1,4 +1,4 @@
-package com.test.springaoptype.introductioninterceptor;
+package com.test.springadvicetype.introductioninterceptor;
 
 /**
  * @Author zhouguanya

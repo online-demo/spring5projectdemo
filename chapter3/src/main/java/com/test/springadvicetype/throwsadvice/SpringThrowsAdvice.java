@@ -1,4 +1,4 @@
-package com.test.springaoptype.throwsadvice;
+package com.test.springadvicetype.throwsadvice;
 
 import org.springframework.aop.ThrowsAdvice;
 import org.springframework.stereotype.Component;
