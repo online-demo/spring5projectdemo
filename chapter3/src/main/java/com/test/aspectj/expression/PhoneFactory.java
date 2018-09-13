@@ -1,5 +1,6 @@
 package com.test.aspectj.expression;
 
+import com.test.aspectj.expression.annotation.Log;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,11 +11,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class PhoneFactory implements Factory {
     /**
-     * 制作产品
+     * 制作产品的方法
      */
     @Override
     @Log
     public void make() {
         System.out.println("生产手机");
+    }
+
+    /**
+     * 运输手机的方法
+     */
+    @Override
+    public void delivery(String address) {
+        System.out.println("运输手机至" + address);
     }
 }

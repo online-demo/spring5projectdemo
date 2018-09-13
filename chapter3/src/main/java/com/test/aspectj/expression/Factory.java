@@ -10,4 +10,9 @@ public interface Factory {
      * 制作产品
      */
     void make();
+
+    /**
+     * 运输
+     */
+    void delivery(String address);
 }

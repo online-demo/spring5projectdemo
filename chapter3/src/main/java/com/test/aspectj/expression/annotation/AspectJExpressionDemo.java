@@ -1,16 +1,17 @@
-package com.test.aspectj.expression;
+package com.test.aspectj.expression.annotation;
 
+import com.test.aspectj.expression.Factory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @Author zhouguanya
  * @Date 2018/9/10
- * @Description 测试配置了 @Log 注解的方法织入了增强
+ * @Description 测试ExecutionAspect切面
  */
 public class AspectJExpressionDemo {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring-chapter3-aspectjexpression.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring-chapter3-aspectjannotationexpression.xml");
         Factory foodFactory = (Factory) context.getBean("foodFactory");
         foodFactory.make();
         System.out.println("-----分割线-----");

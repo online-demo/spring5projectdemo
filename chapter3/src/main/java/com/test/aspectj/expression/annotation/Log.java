@@ -1,4 +1,4 @@
-package com.test.aspectj.expression;
+package com.test.aspectj.expression.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
