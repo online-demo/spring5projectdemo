@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
  * @Date 2018/9/10
  * @Description 手机工厂
  */
+
 @Component
 public class PhoneFactory implements Factory {
     /**
@@ -26,4 +27,11 @@ public class PhoneFactory implements Factory {
     public void delivery(String address) {
         System.out.println("运输手机至" + address);
     }
-}
+
+    /**
+     * 测试@Within注解
+     */
+    public void testWithin() {
+
+    }
+ }

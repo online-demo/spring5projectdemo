@@ -1,7 +1,6 @@
 package com.test.aspectj.expression;
 
 import com.test.aspectj.expression.args.FreshFoodFactory;
-import com.test.aspectj.expression.args.Listen;
 import org.springframework.stereotype.Component;
 
 /**
@@ -29,7 +28,10 @@ public class FoodFactory implements Factory {
         System.out.println("销售食品至" + address);
     }
 
-    public void test(FreshFoodFactory freshFoodFactory) {
+    /**
+     * 测试@args注解
+     */
+    public void testArgsAnnotation(FreshFoodFactory freshFoodFactory) {
 
     }
 }
