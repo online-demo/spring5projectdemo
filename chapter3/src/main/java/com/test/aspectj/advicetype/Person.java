@@ -1,10 +1,10 @@
-package com.test.aspectj.aoptype;
+package com.test.aspectj.advicetype;
 
 import org.springframework.stereotype.Component;
 
 /**
  * @Author: zhouguanya
- * @Date: 2018/9/1 19:37
+ * @Date: 2018/9/1
  * @Description: 一个Spring Bean
  */
 @Component

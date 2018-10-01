@@ -6,8 +6,8 @@ import org.aspectj.lang.annotation.Before;
 
 /**
  * @Author zhouguanya
- * @Date 2018/9/11
- * @Description
+ * @Date 2018/9/10
+ * @Description args和@args切面逻辑
  */
 @Aspect
 public class ArgsAspect {
@@ -19,6 +19,6 @@ public class ArgsAspect {
 
     @After("@args(com.test.aspectj.expression.args.Listen)")
     public void after() {
-        System.out.println("@args匹配到方法实行了");
+        System.out.println("@args匹配到方法执行了");
     }
 }

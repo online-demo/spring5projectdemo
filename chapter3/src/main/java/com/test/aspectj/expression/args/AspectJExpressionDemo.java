@@ -20,9 +20,9 @@ public class AspectJExpressionDemo {
         phoneFactory.delivery("北京");
         System.out.println("-----分割线-----");
         FreshFoodFactory freshFoodFactory = (FreshFoodFactory) context.getBean("freshFoodFactory");
-        foodFactory.testArgsAnnotation(freshFoodFactory);
+        freshFoodFactory.testArgsAnnotation(freshFoodFactory);
         System.out.println("-----分割线-----");
         FrozenFoodFactory frozenFoodFactory = (FrozenFoodFactory) context.getBean("frozenFoodFactory");
-        foodFactory.testArgsAnnotation(frozenFoodFactory);
+        frozenFoodFactory.testArgsAnnotation(frozenFoodFactory);
     }
 }

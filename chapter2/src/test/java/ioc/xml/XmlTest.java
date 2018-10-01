@@ -1,4 +1,4 @@
-package ioc.constructor;
+package ioc.xml;
 
 import com.test.ioc.xml.Deliverable;
 import com.test.ioc.xml.Speakable;

@@ -1,4 +1,4 @@
-package com.test.aspectj.aoptype;
+package com.test.aspectj.advicetype;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @Author: zhouguanya
- * @Date: 2018/9/1 19:08
+ * @Date: 2018/9/1
  * @Description: 包含各种增强类型的切面
  */
 @Component
@@ -16,7 +16,7 @@ public class AllAspect {
     /**
      * 切入点
      */
-    @Pointcut("execution(* com.test.aspectj.aoptype.*.*(..))")
+    @Pointcut("execution(* com.test.aspectj.advicetype.*.*(..))")
     public void allAointCut() {
 
     }

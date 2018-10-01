@@ -1,11 +1,11 @@
-package com.test.aspectj.aoptype;
+package com.test.aspectj.advicetype;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @Author: zhouguanya
- * @Date: 2018/9/1 19:35
+ * @Date: 2018/9/1
  * @Description: 测试各种类型的增强
  */
 public class AllAspectDemo {
