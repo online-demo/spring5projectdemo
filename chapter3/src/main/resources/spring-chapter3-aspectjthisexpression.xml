@@ -8,5 +8,5 @@
     <context:component-scan base-package="com.test.aspectj.expression"/>
     <bean id="listenerAspect" class="com.test.aspectj.expression.thisexpression.ListenerAspect"/>
     <bean id="thisAspect" class="com.test.aspectj.expression.thisexpression.ThisAspect"/>
-    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <aop:aspectj-autoproxy />
 </beans>

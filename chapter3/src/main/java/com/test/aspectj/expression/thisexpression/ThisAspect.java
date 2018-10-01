@@ -5,10 +5,12 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.core.Ordered;
 
+import javax.annotation.Resource;
+
 /**
  * @Author zhouguanya
  * @Date 2018/9/13
- * @Description
+ * @Description 测试this和target的切面 
  */
 @Aspect
 public class ThisAspect implements Ordered {
@@ -17,7 +19,12 @@ public class ThisAspect implements Ordered {
      */
     @AfterReturning("this(com.test.aspectj.expression.thisexpression.Listener)")
     public void after() {
-        System.out.println("ThisAspect执行了");
+        System.out.println("ThisAspect after方法执行了");
+    }
+
+    @Before("target(com.test.aspectj.expression.thisexpression.Listener)")
+    public void before() {
+        System.out.println("ThisAspect before方法执行了");
     }
 
     /**
