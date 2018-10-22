@@ -1,10 +1,10 @@
 .DS_Store
 .idea/
 out/
-spring50projectdemo.iml
+spring5projectdemo.iml
 target/
 
 chapter1/chapter1.iml
 chapter2/chapter2.iml
 project.demo.iml
-spring50/spring50.iml
+spring5/spring5.iml

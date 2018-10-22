@@ -14,6 +14,6 @@ public class Person {
      * 说话的方法
      */
     public void say() {
-        System.out.println("Hello Spring50");
+        System.out.println("Hello spring5");
     }
 }

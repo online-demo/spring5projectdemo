@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.test.spring50</groupId>
+  <groupId>com.test.spring5</groupId>
   <artifactId>project.demo</artifactId>
   <version>1.0-SNAPSHOT</version>
   <modules>
@@ -13,11 +13,12 @@
       <module>chapter3</module>
       <module>chapter5</module>
       <module>chapter6</module>
+      <module>spring5all</module>
   </modules>
 
   <packaging>pom</packaging>
 
-  <name>spring50.parent</name>
+  <name>spring5.parent</name>
   <!-- FIXME change it to the project's website -->
   <url>http://localhost:8080</url>
 
@@ -26,7 +27,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <spring.framework.version>5.1.0.RELEASE</spring.framework.version>
-    <spring50.chapter1.version>1.0-SNAPSHOT</spring50.chapter1.version>
+    <spring5.chapter1.version>1.0-SNAPSHOT</spring5.chapter1.version>
 
   </properties>
 
@@ -142,7 +143,7 @@
               <artifactSet>
                 <includes>
                   <include>chapter1</include>
-                  <include>spring50</include>
+                  <include>spring5</include>
                 </includes>
               </artifactSet>
               <!-- 包含号合并的资源文件 -->
