@@ -11,7 +11,7 @@ public class Table {
      */
     public void location() throws InterruptedException {
         //模拟耗时，方便观察输出结果
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         System.out.println("我是餐桌，我被放在厨房中");
     }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--配置通知器，通知器的实现定义了需要对目标对象进行的增强行为-->
+    <bean id="logAdvisor" class="com.test.sourcecodelearning.LogAroundAdvice"/>
+    <!--目标对象-->
+    <bean id="sourceTarget" class="com.test.sourcecodelearning.Target"/>
+    <!--配置AOP代理，封装AOP功能的主要类-->
+    <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <!--AOP代理接口-->
+        <property name="proxyInterfaces">
+            <value>
+                com.test.sourcecodelearning.Log
+            </value>
+        </property>
+        <!--需要增强的对象-->
+        <property name="target">
+            <ref bean="sourceTarget"/>
+        </property>
+        <!--拦截器的名字，即通知器在AOP代理的配置下通过使用代理对象的拦截机制发挥作用-->
+        <property name="interceptorNames">
+            <list>
+                <value>logAdvisor</value>
+            </list>
+        </property>
+    </bean>
+</beans>

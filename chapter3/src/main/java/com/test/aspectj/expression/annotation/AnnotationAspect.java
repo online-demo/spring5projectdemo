@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @Author zhouguanya
- * @Date 2018/9/10
+ * @Date 2018/9/100
  * @Description 使用 @annotation() 来为所有加了 @Log 注解的方法织入增强
  */
 @Aspect

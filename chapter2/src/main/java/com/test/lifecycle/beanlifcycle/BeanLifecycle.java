@@ -45,10 +45,10 @@ public class BeanLifecycle implements BeanNameAware, ApplicationContextAware, In
     }
 
     /**
-     * 5. init-method属性指定的方法
+     * 50. init-method属性指定的方法
      */
     public void lifecycleInit() {
-        System.out.println("5. 【Bean级别】init-method指定的方法执行了");
+        System.out.println("50. 【Bean级别】init-method指定的方法执行了");
     }
 
     /**

@@ -16,7 +16,7 @@ public class CgLibAnnotationDemo {
         Table table = (Table) applicationContext.getBean("table");
         desk.location();
         System.out.println("-----分割线-----");
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         table.location();
     }
 }

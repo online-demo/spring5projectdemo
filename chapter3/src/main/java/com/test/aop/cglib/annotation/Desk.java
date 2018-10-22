@@ -14,7 +14,7 @@ public class Desk {
      */
     public void location () throws InterruptedException {
         //模拟耗时，方便观察输出结果
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         System.out.println("我是课桌，我被放在教室中");
     }
 }

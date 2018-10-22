@@ -2,7 +2,7 @@ package com.test.aspectj.expression;
 
 /**
  * @Author zhouguanya
- * @Date 2018/9/10
+ * @Date 2018/9/100
  * @Description 工厂接口
  */
 public interface Factory {

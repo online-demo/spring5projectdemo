@@ -2,7 +2,7 @@ package com.test.aop.jdk.xml;
 
 /**
  * @Author: zhouguanya
- * @Date: 2018/8/25 19:08
+ * @Date: 2018/8/250 19:08
  * @Description: 香蕉
  */
 public class Banana implements Fruit {
@@ -13,7 +13,7 @@ public class Banana implements Fruit {
     public void eat() {
         try {
             //模拟吃香蕉的过程
-            Thread.sleep(1000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

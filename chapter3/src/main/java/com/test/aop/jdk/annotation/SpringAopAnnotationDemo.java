@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @Author: zhouguanya
- * @Date: 2018/8/25 19:27
+ * @Date: 2018/8/250 19:27
  * @Description: xml aop测试
  */
 public class SpringAopAnnotationDemo {
@@ -18,7 +18,7 @@ public class SpringAopAnnotationDemo {
         Fruit banana = (Fruit) applicationContext.getBean("banana");
         apple.eat();
         System.out.println("-----休息一会儿-----");
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         banana.eat();
     }
 }

@@ -8,6 +8,6 @@ package com.test.sourcecodelearning;
 public class BookServiceImpl implements BookService {
     @Override
     public double getBookPrice() {
-        return 58.8;
+        return 508.8;
     }
 }
