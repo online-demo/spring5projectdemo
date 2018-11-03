@@ -28,6 +28,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <spring.framework.version>5.1.0.RELEASE</spring.framework.version>
     <spring5.chapter1.version>1.0-SNAPSHOT</spring5.chapter1.version>
+    <spring5.chapter6.version>1.0-SNAPSHOT</spring5.chapter6.version>
 
   </properties>
 
@@ -121,6 +122,12 @@
       <artifactId>reactor-test</artifactId>
       <version>3.2.0.RELEASE</version>
       <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webflux</artifactId>
+      <version>${spring.framework.version}</version>
     </dependency>
 
   </dependencies>
