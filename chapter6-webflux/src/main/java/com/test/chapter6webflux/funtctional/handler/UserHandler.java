@@ -17,12 +17,8 @@ import reactor.core.publisher.Mono;
  */
 @Component
 public class UserHandler {
-
-    private UserService userService;
     @Autowired
-    public UserHandler(UserService userService) {
-        this.userService = userService;
-    }
+    private UserService userService;
 
     public Mono<ServerResponse> queryAllUserList(ServerRequest serverRequest){
         Flux<User> allUser = userService.queryAllUserList();
@@ -30,7 +26,7 @@ public class UserHandler {
     }
 
     public Mono<ServerResponse> queryUserById(ServerRequest serverRequest){
-        //获取url上的id
+        //获取url上携带的参数id
         Long uid = Long.valueOf(serverRequest.pathVariable("id"));
         Mono<User> user = userService.queryUserById(uid);
         return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(user,User.class);

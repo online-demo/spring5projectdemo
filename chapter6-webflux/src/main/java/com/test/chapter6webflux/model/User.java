@@ -33,11 +33,4 @@ public class User {
         this.name = name;
     }
 
-    /** 重写toString方法 */
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name;
-    }
 }
