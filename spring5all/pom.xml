@@ -25,6 +25,11 @@
             <artifactId>chapter6</artifactId>
             <version>${spring5.chapter6.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.test.spring5</groupId>
+            <artifactId>chapter7</artifactId>
+            <version>${spring5.chapter7.version}</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>spring5all</finalName>
