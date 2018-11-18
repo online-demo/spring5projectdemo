@@ -21,7 +21,7 @@ public class WebClientTest {
      * 测试currentDate接口
      */
     @Test
-    public void testCurrentDate() throws InterruptedException {
+    public void testCurrentDate() {
         WebClient webClient = WebClient.create("http://localhost:8080");
         Mono<String> resp = webClient
                 .get().uri("/date/webflux/currentDate")
@@ -29,4 +29,5 @@ public class WebClientTest {
                 .bodyToMono(String.class);
         System.out.println(resp.block());
     }
+
 }

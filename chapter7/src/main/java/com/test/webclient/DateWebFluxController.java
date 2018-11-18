@@ -1,11 +1,9 @@
 package com.test.webclient;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 import javax.annotation.Resource;
-
 /**
  * @Author zhouguanya
  * @Date 2018/11/7
@@ -20,4 +18,5 @@ public class DateWebFluxController {
     public Mono<String> getCurrentDate() {
         return dateWebFluxService.queryCurrentDate();
     }
+
 }
