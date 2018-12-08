@@ -9,10 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.test.spring5</groupId>
     <artifactId>chapter7</artifactId>
     <version>${spring5.chapter7.version}</version>
-
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
