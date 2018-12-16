@@ -7,7 +7,6 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
-
     <!-- 配置自动扫描的包 -->
     <context:component-scan base-package="com.test"></context:component-scan>
 
@@ -15,5 +14,21 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name = "prefix" value="/pages/"></property>
         <property name = "suffix" value = ".jsp"></property>
+        <property name="order" value="1"/>
     </bean>
+
+
+    <!-- 配置freeMarker的模板路径 -->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/template/" />
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
+    <!-- freemarker视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="suffix" value=".ftl" />
+        <property name="contentType" value="text/html;charset=UTF-8" />
+        <property name="order" value="0"></property>
+    </bean>
+
+    <mvc:annotation-driven/>
 </beans>
