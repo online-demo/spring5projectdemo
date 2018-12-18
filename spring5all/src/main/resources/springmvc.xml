@@ -31,4 +31,11 @@
     </bean>
 
     <mvc:annotation-driven/>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/interceptor/**"/>
+            <bean class="com.test.mvc.interceptor.HelloInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
