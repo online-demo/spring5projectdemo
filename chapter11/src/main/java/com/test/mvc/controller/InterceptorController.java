@@ -21,7 +21,7 @@ public class InterceptorController {
 
     @RequestMapping("/bye")
     @ResponseBody
-    public String world() {
+    public String bye() {
         return "bye bye interceptor";
     }
 }
