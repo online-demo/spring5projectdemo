@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.mybatis.dao.CustomerDao">
+    <resultMap id="BaseResultMap" type="com.test.mybatis.entity.Customer">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="phone" jdbcType="VARCHAR" property="phone" />
+        <result column="adddate" jdbcType="TIMESTAMP" property="addDate" />
+        <result column="updatedate" jdbcType="TIMESTAMP" property="updateDate" />
+    </resultMap>
+    <select id="query" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        *
+        from customer
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from customer
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="save" parameterType="com.test.mybatis.entity.Customer">
+        insert into customer (name, phone)
+        values (#{name,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR})
+    </insert>
+    <update id="update" parameterType="com.test.mybatis.entity.Customer">
+        update customer set name = #{name}, phone = #{phone} where id = #{id}
+    </update>
+</mapper>
