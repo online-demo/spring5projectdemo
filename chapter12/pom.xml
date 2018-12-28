@@ -27,7 +27,11 @@
             <version>1.18.4</version>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>com.test.spring5</groupId>
+            <artifactId>chapter13</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>

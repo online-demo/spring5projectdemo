@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.transaction.dao.AccountBalanceDao">
+    <resultMap id="BaseResultMap" type="com.test.transaction.entity.AccountBalance">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="customerId" jdbcType="INTEGER" property="customerId" />
+        <result column="balance" jdbcType="NUMERIC" property="balance" />
+        <result column="adddate" jdbcType="TIMESTAMP" property="addDate" />
+        <result column="updatedate" jdbcType="TIMESTAMP" property="updateDate" />
+    </resultMap>
+    <select id="queryAccountByCustomerId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        *
+        from account_balance
+        where customerId = #{customerId,jdbcType=BIGINT}
+    </select>
+    <insert id="saveAccountBalance" parameterType="com.test.transaction.entity.AccountBalance" keyProperty="id">
+        insert into account_balance (customerId, balance)
+        values (#{customerId,jdbcType=INTEGER}, #{balance,jdbcType=NUMERIC})
+    </insert>
+    <update id="updateAccountBalance" parameterType="com.test.transaction.entity.AccountBalance">
+        update account_balance set balance = #{balance,jdbcType=NUMERIC} where customerId = #{customerId,jdbcType=INTEGER}
+    </update>
+</mapper>
