@@ -1,0 +1,9 @@
+CREATE TABLE `book` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `name` varchar(50) NOT NULL COMMENT '书名',
+  `price` int(11) DEFAULT NULL COMMENT '价格',
+  `adddate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updatedate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`),
+  KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8

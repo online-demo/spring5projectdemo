@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+    <context:component-scan base-package="com.test"/>
+    <!--kafka生产者配置-->
+    <bean id="producerProperties" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <!--kafka集群-->
+                <entry key="bootstrap.servers" value="127.0.0.1:9092,127.0.0.1:9093,127.0.0.1:9094"/>
+                <entry key="retries" value="1"/>
+                <entry key="batch.size" value="16384"/>
+                <entry key="buffer.memory" value="10285760"/>
+                <entry key="key.serializer" value="org.apache.kafka.common.serialization.StringSerializer"/>
+                <entry key="value.serializer" value="org.apache.kafka.common.serialization.StringSerializer"/>
+            </map>
+        </constructor-arg>
+    </bean>
+    <!--配置ProducerFactory-->
+    <bean id="producerFactory" class="org.springframework.kafka.core.DefaultKafkaProducerFactory">
+        <constructor-arg>
+            <ref bean="producerProperties"></ref>
+        </constructor-arg>
+    </bean>
+    <!--KafkaTemplate 消息发送-->
+    <bean id="kafkaTemplate" class="org.springframework.kafka.core.KafkaTemplate">
+        <constructor-arg ref="producerFactory"></constructor-arg>
+        <constructor-arg name="autoFlush" value="true"></constructor-arg>
+    </bean>
+    <!--kafka消费者配置-->
+    <bean id="consumerProperties" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <!--kafka集群-->
+                <entry key="bootstrap.servers" value="127.0.0.1:9092,127.0.0.1:9093,127.0.0.1:9094"/>
+                <entry key="group.id" value="kafka_consumer_group"/>
+                <entry key="session.timeout.ms" value="30000"/>
+                <entry key="key.deserializer" value="org.apache.kafka.common.serialization.StringDeserializer"/>
+                <entry key="value.deserializer" value="org.apache.kafka.common.serialization.StringDeserializer"/>
+            </map>
+        </constructor-arg>
+    </bean>
+    <!--ConsumerFactory-->
+    <bean id="consumerFactory" class="org.springframework.kafka.core.DefaultKafkaConsumerFactory">
+        <constructor-arg>
+            <ref bean="consumerProperties"/>
+        </constructor-arg>
+    </bean>
+    <!--实际执行消息消费的类(指向kafka的实际消费的类)-->
+    <bean id="messageConsumer" class="com.test.kafka.consumer.MessageConsumer"/>
+    <!--消费者容器配置信息-->
+    <bean id="containerProperties" class="org.springframework.kafka.listener.ContainerProperties">
+        <constructor-arg value="spring-kafka-test"/>
+        <property name="messageListener" ref="messageConsumer"/>
+    </bean>
+    <!-- 创建messageListenerContainer bean，使用的时候，只需要注入这个bean -->
+    <bean id="messageListenerContainer" class="org.springframework.kafka.listener.KafkaMessageListenerContainer"
+          init-method="doStart">
+        <constructor-arg ref="consumerFactory"/>
+        <constructor-arg ref="containerProperties"/>
+    </bean>
+</beans>
