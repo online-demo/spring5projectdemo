@@ -14,8 +14,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration("classpath:dubbo-provider.xml")
 public class DubboProviderTest {
     @Test
-    public void start_provider_1() throws Exception {
-        System.out.println("Dubbo Provider 1 started successfully...");
+    public void startProvider() throws Exception {
+        System.out.println("Dubbo Provider started successfully...");
         System.in.read();
     }
 }

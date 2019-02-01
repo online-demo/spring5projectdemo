@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * @Author: zhouguanya
  * @Date: 2019/01/31
- * @Description:
+ * @Description: 测试服务调用者
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:dubbo-consumer.xml")

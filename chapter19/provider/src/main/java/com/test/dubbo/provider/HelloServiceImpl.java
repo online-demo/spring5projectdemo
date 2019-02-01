@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 /**
  * @Author: zhouguanya
  * @Date: 2019/01/31
- * @Description:
+ * @Description: 服务提供方实现接口
  */
 public class HelloServiceImpl implements HelloService {
     /**

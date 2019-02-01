@@ -3,8 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
+    <!-- 服务消费方应用名 -->
     <dubbo:application name="dubbo-consumer"/>
+    <!-- 注册中心地址 -->
     <dubbo:registry address="zookeeper://127.0.0.1:2182?backup=127.0.0.1:2183,127.0.0.1:2184,127.0.0.1:2185,127.0.0.1:2186" />
+    <!-- 引用服务 -->
     <dubbo:reference id="helloService" interface="com.test.dubbo.api.HelloService"/>
 </beans>
