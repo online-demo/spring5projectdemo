@@ -9,14 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter19</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>api</module>
-        <module>consumer</module>
-        <module>provider</module>
-        <module>spi</module>
-    </modules>
+    <artifactId>chapter20</artifactId>
 
 
 </project>
