@@ -1,6 +1,5 @@
 package com.test.sourcecodelearning;
 
-import com.test.ioc.xml.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 

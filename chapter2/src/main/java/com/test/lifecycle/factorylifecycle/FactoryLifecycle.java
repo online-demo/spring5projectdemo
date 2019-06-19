@@ -1,4 +1,4 @@
-package com.test.lifecycle.factorylifecycle.containerlifecycle;
+package com.test.lifecycle.factorylifecycle;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
@@ -15,7 +15,7 @@ public class FactoryLifecycle implements BeanFactoryPostProcessor {
      * 构造器
      */
     public FactoryLifecycle () {
-        System.out.println("一【工厂级别】FactoryLifecycle构造器执行了");
+        System.out.println("一 【工厂级别】FactoryLifecycle构造器执行了");
     }
 
     /**

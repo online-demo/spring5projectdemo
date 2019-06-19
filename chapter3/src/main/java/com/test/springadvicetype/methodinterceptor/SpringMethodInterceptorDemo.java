@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @Date 2018/9/2
  * @Description Spring环绕增强测试
  */
-public class SpringBeforeAdviceDemo {
+public class SpringMethodInterceptorDemo {
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring-chapter3-springaoptype.xml");
